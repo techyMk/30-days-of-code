@@ -1,0 +1,16 @@
+#Program to find the maximum subarray
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int n=nums.size(),sum=0,max_subarr=INT_MIN,i=0;
+        while(i<n)
+        {
+            sum+=nums[i];
+            i++;
+            max_subarr=max(sum,max_subarr);
+            if(sum<0)
+                sum=0;
+        }return max_subarr;
+    }
+};
