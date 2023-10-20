@@ -1,0 +1,32 @@
+#Program to determine if the input string is valid
+
+class Solution {
+private:
+    unordered_map<char,char>mp={{')','('},{']','['},{'}','{'}};
+public:
+    bool isValid(string s) {
+        int n=s.size();
+        stack<char> st;
+        for(int i=0;i<n;i++)
+        {
+            if(st.size()>0)
+            {
+                if(st.top()==mp[s[i]])
+                {
+                    st.pop();
+                    continue;
+                }
+            }
+            st.push(s[i]);
+        }
+        if(st.size()>0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+};
+
