@@ -1,0 +1,14 @@
+#Program to find the index of the first occurrence of needle in haystack
+
+class Solution {
+public:
+    int strStr(string haystack, string needle) 
+    {
+        int index = haystack.find(needle);
+        if(index != string::npos)
+            return index;
+        else 
+            return -1;
+    }
+};
+
