@@ -1,4 +1,4 @@
-#Program to find that single one out of a twicely appeared elements in the given array
+#Program to find that single one out of a twicely appeared elements in the given array 
 
 class Solution {
 public:
